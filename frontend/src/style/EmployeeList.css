@@ -1,0 +1,147 @@
+.employee-container {
+  padding: 30px;
+  background-color: #f4f8fc;
+  min-height: 100vh;
+}
+
+.header-section {
+  margin-bottom: 30px;
+}
+
+.main-title {
+  color: #0f4c81;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.controls {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.input-field {
+  padding: 10px 12px;
+  width: 240px;
+  border-radius: 8px;
+  border: 1px solid #dcdcdc;
+}
+
+.select-field {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #dcdcdc;
+}
+
+.add-btn {
+  background-color: #ff7a00;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+}
+
+.table thead {
+  background-color: #0f4c81;
+  color: #fff;
+  text-align: left;
+}
+
+.table th,
+.table td {
+  padding: 14px;
+}
+
+.table tr {
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.status {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status.active {
+  background-color: #e6f4ea;
+  color: #2e7d32;
+}
+
+.status.inactive {
+  background-color: #fdecea;
+  color: #c62828;
+}
+
+.action-btn {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  color: white;
+}
+
+.view-btn {
+  background-color: #1f6aa5;
+}
+
+.edit-btn {
+  background-color: #dc3545;
+}
+
+.delete-btn {
+  background-color: #ff7a00;
+}
+
+.action-group {
+  display: flex;
+  gap: 8px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.pagination button {
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  background: #e9edf5;
+  color: #1e3a8a;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.pagination button:hover:not(:disabled) {
+  background: #1e3a8a;
+  color: white;
+}
+
+.pagination button:disabled {
+  background: #cbd5e1;
+  color: #64748b;
+  cursor: not-allowed;
+}
+
+.pagination .active-page {
+  background: #1e3a8a;
+  color: white;
+}

@@ -1,0 +1,54 @@
+.live-location-page {
+  min-height: 100vh;
+  padding: 24px;
+  background: #f5f7fb;
+}
+
+.live-location-header {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px 24px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+}
+
+.live-location-map-wrapper {
+  background: #fff;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+  margin-bottom: 24px;
+}
+
+.live-location-map {
+  width: 100%;
+  height: 500px;
+  border-radius: 12px;
+}
+
+.live-location-empty {
+  background: #fff;
+  border-radius: 16px;
+  padding: 30px;
+  color: #111827;
+  font-weight: 600;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+}
+
+.live-location-error {
+  color: red;
+  margin-top: 10px;
+}
+
+.live-location-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.live-location-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 18px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+}

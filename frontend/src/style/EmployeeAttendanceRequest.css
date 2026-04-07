@@ -1,0 +1,67 @@
+.attendance-request-page {
+  min-height: 100vh;
+  padding: 30px;
+  background: linear-gradient(135deg, #eff6ff, #dbeafe, #e0f2fe);
+  display: flex;
+  /* justify-content: center; */
+  align-items: flex-start;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.attendance-request-card {
+  width: 100%;
+  max-width: 2000px;
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 30px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+}
+
+.attendance-request-card h2 {
+  margin: 0;
+  font-size: 2rem;
+  color: #0f172a;
+}
+
+.request-subtitle {
+  margin-top: 8px;
+  color: #64748b;
+  font-size: 15px;
+}
+
+.attendance-request-form {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.attendance-request-form input,
+.attendance-request-form textarea {
+  padding: 14px;
+  border-radius: 14px;
+  border: 1px solid #d1d5db;
+  outline: none;
+  font-size: 15px;
+}
+
+.attendance-request-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.request-btn {
+  border: none;
+  padding: 14px 24px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 14px;
+  cursor: pointer;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: white;
+  transition: 0.3s ease;
+}
+
+.request-btn:hover {
+  transform: translateY(-2px);
+}

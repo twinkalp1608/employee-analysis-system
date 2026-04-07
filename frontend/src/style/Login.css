@@ -1,0 +1,294 @@
+:root{
+  --bg-dark:#0a1428;
+  --bg-accent:#ff8c42;
+  --card-dark:#1a2d4d;
+  --text-light:#ffffff;
+  --text-muted:#b3b3b3;
+  --input-bg:#0f1f38;
+}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+  font-family:Segoe UI, Roboto, Arial, sans-serif;
+}
+
+body{
+  background:var(--bg-dark);
+}
+
+/* Layout */
+.login-container{
+  min-height:100vh;
+ background-color: #0a1428;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:24px;
+  position:relative;
+  overflow:hidden;
+}
+
+.login-container::before{
+  content:'';
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background-color: #0a1428;
+   
+  pointer-events:none;
+}
+
+/* .login-container::after{
+  content:'';
+  position:absolute;
+  bottom:-150px;
+  left:-150px;
+  width:600px;
+  height:600px;
+  background:linear-gradient(135deg,#ff8c42 0%,rgba(255,140,66,0.5) 50%,transparent 100%);
+  clip-path:polygon(0 40%, 100% 0, 100% 100%, 0 100%);
+  opacity:0.15;
+  z-index:0;
+  pointer-events:none;
+} */
+
+.login-wrapper{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:32px;
+  z-index:1;
+  max-width:500px;
+}
+
+/* Logo Section */
+.logo-section{
+  text-align:center;
+  color:var(--text-light);
+  margin-top:20px;
+}
+
+.logo-large{
+  width:100px;
+  height:100px;
+  margin:0 auto 24px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.logo-img{
+     width: 272%;
+    height: 141%;
+  object-fit:contain;
+}
+
+.brand-title{
+  font-size:32px;
+  font-weight:600;
+  letter-spacing:3px;
+  margin-bottom:12px;
+  text-transform:uppercase;
+  color:var(--text-light);
+}
+
+.brand-subtitle{
+  font-size:18px;
+  color:var(--bg-accent);
+  font-weight:700;
+  letter-spacing:2px;
+}
+
+
+/* Card */
+.login-card{
+  width:380px;
+  background:rgba(2, 23, 57, 0.7);
+  backdrop-filter:blur(20px);
+  border:1px solid rgba(255,140,66,0.15);
+  padding:36px;
+  border-radius:10px;
+  box-shadow:0 25px 60px rgba(0,0,0,0.4);
+}
+
+.form-title{
+  font-size:15px;
+  color:var(--bg-accent);
+  margin-bottom:24px;
+  font-weight:600;
+  text-transform:uppercase;
+  letter-spacing:2px;
+}
+
+/* Inputs */
+.input-group{
+  margin:18px 0;
+  position:relative;
+}
+
+.login-card input{
+  width:100%;
+  padding:14px 16px;
+  background:rgba(20,35,60,0.8);
+  border:1px solid rgba(255,140,66,0.25);
+  border-radius:6px;
+  color:var(--text-light);
+  font-size:14px;
+  outline:none;
+  transition:all 0.3s ease;
+}
+
+.login-card input::placeholder{
+  color:#7a8fa0;
+}
+
+.login-card input:focus{
+  border-color:var(--bg-accent);
+  background:rgba(20,35,60,0.95);
+  box-shadow:0 0 0 4px rgba(255,140,66,0.15);
+}
+
+.toggle{
+  position:absolute;
+  right:14px;
+  top:50%;
+  transform:translateY(-50%);
+  background:none;
+  border:none;
+  color:#7a8fa0;
+  cursor:pointer;
+  font-size:12px;
+  font-weight:600;
+}
+
+/* Button */
+.btn{
+  width:100%;
+  margin-top:28px;
+  padding:16px;
+  border:none;
+  border-radius:6px;
+  background:var(--bg-accent);
+  color:#0a1428;
+  font-weight:700;
+  font-size:15px;
+  cursor:pointer;
+  transition:all 0.3s ease;
+  text-transform:uppercase;
+  letter-spacing:1px;
+}
+
+.btn:hover:not(:disabled){
+  background:#ff9d5c;
+  box-shadow:0 12px 35px rgba(255,140,66,0.35);
+  transform:translateY(-2px);
+}
+
+.btn:disabled{
+  opacity:0.65;
+  cursor:not-allowed;
+}
+
+/* Footer */
+.footer-links{
+  text-align:center;
+  margin-top:20px;
+}
+
+.forgot{
+  color:#8a9ab3;
+  text-decoration:none;
+  font-size:13px;
+  transition:color 0.3s ease;
+  font-weight:500;
+}
+
+.forgot:hover{
+  color:var(--bg-accent);
+}
+
+.sr-only{
+  position:absolute!important;
+  height:1px;
+  width:1px;
+  overflow:hidden;
+  clip:rect(1px,1px,1px,1px);
+  white-space:nowrap;
+}
+
+/* Mobile */
+@media (max-width:480px){
+  .login-wrapper{
+    gap:24px;
+  }
+
+  .login-card{
+    width:100%;
+    padding:28px;
+  }
+
+  .logo-large{
+    width:90px;
+    height:90px;
+  }
+
+  .brand-title{
+    font-size:28px;
+  }
+
+  .form-title{
+    font-size:14px;
+  }
+
+  .btn{
+    padding:14px;
+    font-size:14px;
+  }
+}
+  
+/* Careers Link */
+.candidate-cta-box {
+  margin-top: 22px;
+  padding: 14px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  text-align: center;
+}
+
+.candidate-cta-title {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #eaf4ff;
+}
+
+.candidate-cta-subtitle {
+  display: block;
+  margin-top: 6px;
+  font-size: 13px;
+  color: #9fb3c8;
+}
+
+.candidate-cta-btn {
+  margin-top: 12px;
+  background: transparent;
+  border: 1px solid #2f80c1;
+  color: #7fd0ff;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.candidate-cta-btn:hover {
+  background: #0f4c81;
+  color: #fff;
+  border-color: #0f4c81;
+}
