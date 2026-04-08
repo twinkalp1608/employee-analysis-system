@@ -28,7 +28,7 @@ export default function ApplyJob() {
   // Fetch job details
   const fetchJobDetails = async () => {
     try {
-      const res = await axios.get(`https://employee-analysis-system-1.onrender.com//api/jobs/${jobId}`);
+      const res = await axios.get(`https://employee-analysis-system-1.onrender.com/api/jobs/${jobId}`);
       setJob(res.data.job);
     } catch (error) {
       console.log(error);
@@ -61,7 +61,7 @@ export default function ApplyJob() {
       }
 
       const res = await axios.post(
-        "https://employee-analysis-system-1.onrender.com//api/candidates/apply",
+        "https://employee-analysis-system-1.onrender.com/api/candidates/apply",
         form
       );
 

@@ -9,7 +9,7 @@ const HRList = ({ token }) => {
 
   const fetchHRList = async () => {
     try {
-      const res = await axios.get("https://employee-analysis-system-1.onrender.com//hr", {
+      const res = await axios.get("https://employee-analysis-system-1.onrender.com/hr", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setHrList(res.data);
@@ -26,12 +26,12 @@ const HRList = ({ token }) => {
     e.preventDefault();
     try {
       if (editId) {
-        await axios.put(`https://employee-analysis-system-1.onrender.com//hr/${editId}`, formData, {
+        await axios.put(`https://employee-analysis-system-1.onrender.com/hr/${editId}`, formData, {
           headers: { Authorization: `Bearer ${token}` },
         });
         setEditId(null);
       } else {
-        await axios.post("https://employee-analysis-system-1.onrender.com//hr", formData, {
+        await axios.post("https://employee-analysis-system-1.onrender.com/hr", formData, {
           headers: { Authorization: `Bearer ${token}` },
         });
       }
@@ -52,7 +52,7 @@ const HRList = ({ token }) => {
   const handleDelete = async (id) => {
     if (!window.confirm("Are you sure you want to delete this HR?")) return;
     try {
-      await axios.delete(`https://employee-analysis-system-1.onrender.com//hr/${id}`, {
+      await axios.delete(`https://employee-analysis-system-1.onrender.com/hr/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       fetchHRList();

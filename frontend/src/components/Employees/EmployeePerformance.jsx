@@ -25,7 +25,7 @@ const EmployeePerformance = () => {
       setLoading(true);
 
       const res = await axios.get(
-        "https://employee-analysis-system-1.onrender.com//api/employee/performance/summary",
+        "https://employee-analysis-system-1.onrender.com/api/employee/performance/summary",
         {
           headers: {
             Authorization: `Bearer ${token}`,

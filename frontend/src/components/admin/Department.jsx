@@ -12,7 +12,7 @@ const Department = () => {
   // 🔹 Fetch Departments
   const fetchDepartments = async () => {
     try {
-      const res = await axios.get("https://employee-analysis-system-1.onrender.com//api/departments", {
+      const res = await axios.get("https://employee-analysis-system-1.onrender.com/api/departments", {
         headers: { Authorization: `Bearer ${token}` }
       });
       setDepartments(res.data);
@@ -38,7 +38,7 @@ const Department = () => {
       if (editId) {
         // Update
         await axios.put(
-          `https://employee-analysis-system-1.onrender.com//api/departments/${editId}`,
+          `https://employee-analysis-system-1.onrender.com/api/departments/${editId}`,
           { name },
           { headers: { Authorization: `Bearer ${token}` } }
         );
@@ -47,7 +47,7 @@ const Department = () => {
       } else {
         // Add
         await axios.post(
-          "https://employee-analysis-system-1.onrender.com//api/departments",
+          "https://employee-analysis-system-1.onrender.com/api/departments",
           { name },
           { headers: { Authorization: `Bearer ${token}` } }
         );
@@ -67,7 +67,7 @@ const Department = () => {
 
     try {
       await axios.delete(
-        `https://employee-analysis-system-1.onrender.com//api/departments/${id}`,
+        `https://employee-analysis-system-1.onrender.com/api/departments/${id}`,
         { headers: { Authorization: `Bearer ${token}` } }
       );
       alert("Department Deleted ❌");

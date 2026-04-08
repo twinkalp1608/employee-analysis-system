@@ -20,7 +20,7 @@ const HRRecruitmentDashboard = () => {
     try {
       const token = localStorage.getItem("token");
       const res = await axios.get(
-        "https://employee-analysis-system-1.onrender.com//api/hr/recruitment/dashboard",
+        "https://employee-analysis-system-1.onrender.com/api/hr/recruitment/dashboard",
         {
           headers: { Authorization: `Bearer ${token}` },
         }

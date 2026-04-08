@@ -24,7 +24,7 @@ const Task = () => {
 
   const fetchEmployees = async () => {
     try {
-      const res = await axios.get("https://employee-analysis-system-1.onrender.com//api/employees", {
+      const res = await axios.get("https://employee-analysis-system-1.onrender.com/api/employees", {
         headers: { Authorization: `Bearer ${token}` },
       });
 
@@ -36,7 +36,7 @@ const Task = () => {
 
   const fetchTasks = async () => {
     try {
-      const res = await axios.get("https://employee-analysis-system-1.onrender.com//api/tasks", {
+      const res = await axios.get("https://employee-analysis-system-1.onrender.com/api/tasks", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setTasks(res.data);
@@ -111,7 +111,7 @@ const handleEmployeeSelect = (employeeId, checked) => {
   }
 
   await axios.put(
-    `https://employee-analysis-system-1.onrender.com//api/tasks/${editTaskId}`,
+    `https://employee-analysis-system-1.onrender.com/api/tasks/${editTaskId}`,
     editFormData,
     {
       headers: {
@@ -137,7 +137,7 @@ const handleEmployeeSelect = (employeeId, checked) => {
     formData.append("attachment", form.attachment);
   }
 
-  await axios.post("https://employee-analysis-system-1.onrender.com//api/tasks", formData, {
+  await axios.post("https://employee-analysis-system-1.onrender.com/api/tasks", formData, {
     headers: {
       Authorization: `Bearer ${token}`,
       "Content-Type": "multipart/form-data",
@@ -207,7 +207,7 @@ const handleEmployeeSelect = (employeeId, checked) => {
 
     if (!confirmDelete) return;
 
-    await axios.delete(`https://employee-analysis-system-1.onrender.com//api/tasks/${id}`, {
+    await axios.delete(`https://employee-analysis-system-1.onrender.com/api/tasks/${id}`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -225,7 +225,7 @@ const handleEmployeeSelect = (employeeId, checked) => {
   const handleReview = async (id, status) => {
   try {
     await axios.put(
-      `https://employee-analysis-system-1.onrender.com//api/tasks/review/${id}`,
+      `https://employee-analysis-system-1.onrender.com/api/tasks/review/${id}`,
       { status },
       {
         headers: {
@@ -466,7 +466,7 @@ const handleEmployeeSelect = (employeeId, checked) => {
           {task.attachment && (
             <div className="task-attachment">
               <a
-                href={`https://employee-analysis-system-1.onrender.com//${task.attachment}`}
+                href={`https://employee-analysis-system-1.onrender.com/${task.attachment}`}
                 target="_blank"
                 rel="noreferrer"
               >
@@ -478,7 +478,7 @@ const handleEmployeeSelect = (employeeId, checked) => {
           {task.employeeSubmission && (
             <div className="task-attachment">
               <a
-                href={`https://employee-analysis-system-1.onrender.com//${task.employeeSubmission}`}
+                href={`https://employee-analysis-system-1.onrender.com/${task.employeeSubmission}`}
                 target="_blank"
                 rel="noreferrer"
               >

@@ -44,7 +44,7 @@ const LiveLocation = () => {
   const fetchLocations = async () => {
     try {
       const res = await axios.get(
-        "https://employee-analysis-system-1.onrender.com//api/admin/live-locations",
+        "https://employee-analysis-system-1.onrender.com/api/admin/live-locations",
         {
           headers: {
             Authorization: `Bearer ${token}`,

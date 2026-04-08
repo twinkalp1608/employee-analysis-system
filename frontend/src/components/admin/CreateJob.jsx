@@ -26,7 +26,7 @@ const CreateJob = () => {
     try {
       const token = localStorage.getItem("token");
 
-      const res = await axios.get("https://employee-analysis-system-1.onrender.com//api/departments", {
+      const res = await axios.get("https://employee-analysis-system-1.onrender.com/api/departments", {
         headers: { Authorization: `Bearer ${token}` },
       });
 
@@ -41,7 +41,7 @@ const CreateJob = () => {
       const token = localStorage.getItem("token");
 
       const res = await axios.get(
-        `https://employee-analysis-system-1.onrender.com//api/job-titles/by-department/${departmentId}`,
+        `https://employee-analysis-system-1.onrender.com/api/job-titles/by-department/${departmentId}`,
         {
           headers: { Authorization: `Bearer ${token}` },
         }
@@ -94,7 +94,7 @@ const CreateJob = () => {
         openings: Number(formData.openings),
       };
 
-      const res = await axios.post("https://employee-analysis-system-1.onrender.com//api/hr/jobs", payload, {
+      const res = await axios.post("https://employee-analysis-system-1.onrender.com/api/hr/jobs", payload, {
         headers: { Authorization: `Bearer ${token}` },
       });
 

@@ -68,7 +68,7 @@ const [status] = useState("Pending Approval");
         otherDeduction: formData.otherDeduction || 0,
       };
 
-await axios.post("https://employee-analysis-system-1.onrender.com//api/hr/payroll", payrollData, {
+await axios.post("https://employee-analysis-system-1.onrender.com/api/hr/payroll", payrollData, {
   headers: {
     Authorization: `Bearer ${token}`,
   },
@@ -109,7 +109,7 @@ setShowPayslip(false);
     try {
       const token = localStorage.getItem("token");
 
-      const res = await axios.get("https://employee-analysis-system-1.onrender.com//api/employees", {
+      const res = await axios.get("https://employee-analysis-system-1.onrender.com/api/employees", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -131,7 +131,7 @@ setShowPayslip(false);
 
       const token = localStorage.getItem("token");
 
-      const res = await axios.get("https://employee-analysis-system-1.onrender.com//api/hr/payroll/check", {
+      const res = await axios.get("https://employee-analysis-system-1.onrender.com/api/hr/payroll/check", {
         params: { employeeId, month, year },
         headers: {
           Authorization: `Bearer ${token}`,
@@ -169,7 +169,7 @@ setShowPayslip(false);
       const token = localStorage.getItem("token");
 
       const res = await axios.post(
-        "https://employee-analysis-system-1.onrender.com//api/hr/payroll/preview",
+        "https://employee-analysis-system-1.onrender.com/api/hr/payroll/preview",
         {
           employeeId: formData.employeeId,
           month: formData.month,

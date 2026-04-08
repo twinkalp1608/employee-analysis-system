@@ -31,7 +31,7 @@ export default function ForgotPassword() {
     setLoading(true);
     try {
       await axios.post(
-        "https://employee-analysis-system-1.onrender.com//api/send-otp",
+        "https://employee-analysis-system-1.onrender.com/api/send-otp",
         { email },
       );
       alert("OTP sent successfully");
@@ -46,7 +46,7 @@ export default function ForgotPassword() {
     setLoading(true);
     try {
       await axios.post(
-        "https://employee-analysis-system-1.onrender.com//api/verify-otp",
+        "https://employee-analysis-system-1.onrender.com/api/verify-otp",
         {
           email,
           otp,
@@ -72,7 +72,7 @@ export default function ForgotPassword() {
     setLoading(true);
     try {
       await axios.post(
-        "https://employee-analysis-system-1.onrender.com//api/reset-password",
+        "https://employee-analysis-system-1.onrender.com/api/reset-password",
         {
           email,
           otp,
