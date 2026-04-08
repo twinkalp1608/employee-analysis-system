@@ -125,10 +125,17 @@ function drawPdfTable(doc, rows, startY) {
 }
 
 const app = express();
-app.use(cors({
-  origin: true,
-  credentials: true
-}));
+app.use(
+  cors({
+    origin: [
+      "https://employee-analysis-system.vercel.app",
+      "https://employee-analysis-system-nbpytw0pq-twinkal-panchals-projects.vercel.app",
+    ],
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+    credentials: true,
+  })
+);
 app.use(express.json());
 
 const path = require("path");
