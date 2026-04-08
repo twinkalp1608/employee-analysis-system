@@ -101,7 +101,7 @@ const EmployeeDashboard = () => {
 
   const fetchEmployeeDashboard = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/employee-dashboard", {
+      const res = await axios.get("http://https://employee-analysis-system-1.onrender.com//api/employee-dashboard", {
         headers: { Authorization: `Bearer ${token}` },
       });
 
@@ -114,7 +114,7 @@ const EmployeeDashboard = () => {
 
   const fetchLeaves = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/leave/my-leaves", {
+      const res = await axios.get("http://https://employee-analysis-system-1.onrender.com//api/leave/my-leaves", {
         headers: { Authorization: `Bearer ${token}` },
       });
 
@@ -126,7 +126,7 @@ const EmployeeDashboard = () => {
 
   const fetchNotifications = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/notifications/employee", {
+      const res = await axios.get("http://https://employee-analysis-system-1.onrender.com//api/notifications/employee", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setNotifications(res.data || []);
@@ -146,7 +146,7 @@ const EmployeeDashboard = () => {
     if (isOpening) {
       try {
         await axios.put(
-          "http://localhost:5000/api/notifications/read-all/employee",
+          "http://https://employee-analysis-system-1.onrender.com//api/notifications/read-all/employee",
           {},
           {
             headers: { Authorization: `Bearer ${token}` },

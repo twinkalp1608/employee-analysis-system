@@ -35,7 +35,7 @@ const EmployeePayrollHistory = () => {
       setLoading(true);
 
       const res = await axios.get(
-        "http://localhost:5000/api/employee/payroll/history",
+        "http://https://employee-analysis-system-1.onrender.com//api/employee/payroll/history",
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,

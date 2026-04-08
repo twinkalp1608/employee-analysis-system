@@ -18,7 +18,7 @@ const employeesPerPage = 5;
     const fetchEmployees = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5000/api/employees",
+          "http://https://employee-analysis-system-1.onrender.com//api/employees",
           {
             headers: { Authorization: `Bearer ${token}` }
           }
@@ -43,7 +43,7 @@ const employeesPerPage = 5;
 
     try {
       await axios.delete(
-        `http://localhost:5000/api/employees/${id}`,
+        `http://https://employee-analysis-system-1.onrender.com//api/employees/${id}`,
         {
           headers: { Authorization: `Bearer ${token}` }
         }

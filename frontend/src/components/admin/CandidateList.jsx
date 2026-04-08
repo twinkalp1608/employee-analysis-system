@@ -14,7 +14,7 @@ const CandidateList = () => {
   const fetchCandidates = async () => {
     try {
       const token = localStorage.getItem("token");
-      const res = await axios.get("http://localhost:5000/api/hr/candidates", {
+      const res = await axios.get("http://https://employee-analysis-system-1.onrender.com//api/hr/candidates", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setCandidates(res.data.candidates || []);
@@ -28,7 +28,7 @@ const CandidateList = () => {
     try {
       const token = localStorage.getItem("token");
       const res = await axios.put(
-        `http://localhost:5000/api/hr/candidates/${id}/status`,
+        `http://https://employee-analysis-system-1.onrender.com//api/hr/candidates/${id}/status`,
         { status },
         { headers: { Authorization: `Bearer ${token}` } },
       );
@@ -108,7 +108,7 @@ const CandidateList = () => {
                     {candidate.resume ? (
                       <div className="recruitment-actions">
                         <a
-                          href={`http://localhost:5000/api/download-resume/${candidate.resume.split("/").pop()}`}
+                          href={`http://https://employee-analysis-system-1.onrender.com//api/download-resume/${candidate.resume.split("/").pop()}`}
                           className="recruitment-btn secondary"
                           style={{
                             textDecoration: "none",

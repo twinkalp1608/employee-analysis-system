@@ -36,7 +36,7 @@ const [filteredDesignations, setFilteredDesignations] = useState([]);
   // Fetch employee data when component mounts
  useEffect(() => {
   axios
-    .get(`http://localhost:5000/api/employees/${id}`, {
+    .get(`http://https://employee-analysis-system-1.onrender.com//api/employees/${id}`, {
       headers: { Authorization: `Bearer ${token}` }
     })
     .then(res => {
@@ -67,7 +67,7 @@ const [filteredDesignations, setFilteredDesignations] = useState([]);
 
   useEffect(() => {
   axios
-    .get("http://localhost:5000/api/departments", {
+    .get("http://https://employee-analysis-system-1.onrender.com//api/departments", {
       headers: { Authorization: `Bearer ${token}` }
     })
     .then(res => setDepartments(res.data))
@@ -76,7 +76,7 @@ const [filteredDesignations, setFilteredDesignations] = useState([]);
 
 useEffect(() => {
   axios
-    .get("http://localhost:5000/api/designations", {
+    .get("http://https://employee-analysis-system-1.onrender.com//api/designations", {
       headers: { Authorization: `Bearer ${token}` }
     })
     .then(res => setDesignations(res.data))
@@ -123,7 +123,7 @@ useEffect(() => {
     }
 
     const res = await axios.put(
-      `http://localhost:5000/api/employees/${id}`,
+      `http://https://employee-analysis-system-1.onrender.com//api/employees/${id}`,
       data,
       {
         headers: {

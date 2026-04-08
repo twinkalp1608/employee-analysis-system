@@ -27,7 +27,7 @@ const EmployeeAttendanceRequest = () => {
   const fetchBlockedDates = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:5000/api/holidays/blocked-dates",
+        "http://https://employee-analysis-system-1.onrender.com//api/holidays/blocked-dates",
         config
       );
       setBlockedDates(res.data || []);
@@ -100,7 +100,7 @@ const EmployeeAttendanceRequest = () => {
       setLoading(true);
 
       await axios.post(
-        "http://localhost:5000/api/attendance/request",
+        "http://https://employee-analysis-system-1.onrender.com//api/attendance/request",
         formData,
         config
       );

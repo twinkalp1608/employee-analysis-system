@@ -20,7 +20,7 @@ const [form, setForm] = useState({
 
   const fetchPerformance = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/performance", {
+      const res = await axios.get("http://https://employee-analysis-system-1.onrender.com//api/performance", {
         headers: { Authorization: `Bearer ${token}` }
       });
       setData(res.data);
@@ -32,7 +32,7 @@ const [form, setForm] = useState({
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/performance/${id}`, {
+      await axios.delete(`http://https://employee-analysis-system-1.onrender.com//api/performance/${id}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       fetchPerformance();
@@ -43,7 +43,7 @@ const [form, setForm] = useState({
 
   const fetchEmployees = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/employees", {
+      const res = await axios.get("http://https://employee-analysis-system-1.onrender.com//api/employees", {
         headers: { Authorization: `Bearer ${token}` }
       });
       setEmployees(res.data);
@@ -63,7 +63,7 @@ const [form, setForm] = useState({
     e.preventDefault();
 
     try {
-      const res = await axios.post("http://localhost:5000/api/performance", form, {
+      const res = await axios.post("http://https://employee-analysis-system-1.onrender.com//api/performance", form, {
         headers: { Authorization: `Bearer ${token}` }
       });
 
@@ -85,7 +85,7 @@ const [form, setForm] = useState({
 
   const fetchTopPerformers = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/performance/top", {
+      const res = await axios.get("http://https://employee-analysis-system-1.onrender.com//api/performance/top", {
         headers: { Authorization: `Bearer ${token}` }
       });
       setData(res.data);
@@ -97,7 +97,7 @@ const [form, setForm] = useState({
 
   const fetchLowPerformers = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/performance/low", {
+      const res = await axios.get("http://https://employee-analysis-system-1.onrender.com//api/performance/low", {
         headers: { Authorization: `Bearer ${token}` }
       });
       setData(res.data);
@@ -109,7 +109,7 @@ const [form, setForm] = useState({
 
   const fetchDepartmentReport = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/performance/department", {
+      const res = await axios.get("http://https://employee-analysis-system-1.onrender.com//api/performance/department", {
         headers: { Authorization: `Bearer ${token}` }
       });
       setData(res.data);
@@ -158,7 +158,7 @@ const getMonthName = (monthNumber) => {
   const handleFinalize = async (id) => {
   try {
     const res = await axios.put(
-      `http://localhost:5000/api/performance/finalize/${id}`,
+      `http://https://employee-analysis-system-1.onrender.com//api/performance/finalize/${id}`,
       {},
       {
         headers: { Authorization: `Bearer ${token}` }

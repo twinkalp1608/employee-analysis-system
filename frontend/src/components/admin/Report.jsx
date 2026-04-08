@@ -45,7 +45,7 @@ const Report = () => {
 
   const fetchDepartments = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/departments", {
+      const res = await axios.get("http://https://employee-analysis-system-1.onrender.com//api/departments", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setDepartments(res.data || []);
@@ -56,7 +56,7 @@ const Report = () => {
 
   const fetchEmployees = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/employees", {
+      const res = await axios.get("http://https://employee-analysis-system-1.onrender.com//api/employees", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setEmployees(res.data || []);
@@ -91,7 +91,7 @@ const Report = () => {
       }
 
       const res = await axios.get(
-        `http://localhost:5000/api/employees/by-department/${selectedDepartment}`,
+        `http://https://employee-analysis-system-1.onrender.com//api/employees/by-department/${selectedDepartment}`,
         {
           headers: { Authorization: `Bearer ${token}` },
         }
@@ -120,8 +120,8 @@ const Report = () => {
 
       const endpoint =
         role === "hr"
-          ? "http://localhost:5000/api/reports/generate-and-save"
-          : "http://localhost:5000/api/reports/generate";
+          ? "http://https://employee-analysis-system-1.onrender.com//api/reports/generate-and-save"
+          : "http://https://employee-analysis-system-1.onrender.com//api/reports/generate";
 
       const res = await axios.post(
         endpoint,

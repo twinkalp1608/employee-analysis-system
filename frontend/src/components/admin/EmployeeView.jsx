@@ -13,7 +13,7 @@ const EmployeeView = () => {
     const token = localStorage.getItem("token");
 
     const response = await axios.get(
-      `http://localhost:5000/${employee.resume}`,
+      `http://https://employee-analysis-system-1.onrender.com//${employee.resume}`,
       {
         responseType: "blob",
         headers: {
@@ -46,7 +46,7 @@ useEffect(() => {
   const token = localStorage.getItem("token");
 
   axios.get(
-    `http://localhost:5000/api/employees/${id}`,
+    `http://https://employee-analysis-system-1.onrender.com//api/employees/${id}`,
     {
       headers: {
         Authorization: `Bearer ${token}`
@@ -120,7 +120,7 @@ useEffect(() => {
           }}
         >
           <img
-            src={`http://localhost:5000/${employee.profilePhoto}`}
+            src={`http://https://employee-analysis-system-1.onrender.com//${employee.profilePhoto}`}
             alt="Profile"
             width="140"
             height="140"

@@ -19,7 +19,7 @@ export default function Careers() {
       setLoading(true);
       setError("");
 
-      const res = await axios.get("http://localhost:5000/api/jobs");
+      const res = await axios.get("http://https://employee-analysis-system-1.onrender.com//api/jobs");
 
       // Safe check
       if (res.data && Array.isArray(res.data.jobs)) {

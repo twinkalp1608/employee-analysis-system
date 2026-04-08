@@ -23,7 +23,7 @@ const AttendanceReport = () => {
 
     try {
       const res = await axios.get(
-        "http://localhost:5000/api/admin/attendance",
+        "http://https://employee-analysis-system-1.onrender.com//api/admin/attendance",
         config
       );
 
@@ -78,7 +78,7 @@ const AttendanceReport = () => {
 
   try {
     const res = await axios.get(
-      "http://localhost:5000/api/admin/attendance",
+      "http://https://employee-analysis-system-1.onrender.com//api/admin/attendance",
       config
     );
 

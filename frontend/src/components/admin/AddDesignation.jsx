@@ -14,7 +14,7 @@ const AddDesignation = () => {
   const token = localStorage.getItem("token");
 
   const fetchDepartments = async () => {
-    const res = await axios.get("http://localhost:5000/api/departments", {
+    const res = await axios.get("http://https://employee-analysis-system-1.onrender.com//api/departments", {
       headers: { Authorization: `Bearer ${token}` },
     });
     setDepartments(res.data);
@@ -22,7 +22,7 @@ const AddDesignation = () => {
 
   const fetchDesignations = async (deptId = "") => {
     const res = await axios.get(
-      `http://localhost:5000/api/designations?departmentId=${deptId}`,
+      `http://https://employee-analysis-system-1.onrender.com//api/designations?departmentId=${deptId}`,
       {
         headers: { Authorization: `Bearer ${token}` },
       },
@@ -47,14 +47,14 @@ const AddDesignation = () => {
     try {
       if (editingId) {
         await axios.put(
-          `http://localhost:5000/api/designations/${editingId}`,
+          `http://https://employee-analysis-system-1.onrender.com//api/designations/${editingId}`,
           { name, department },
           { headers: { Authorization: `Bearer ${token}` } },
         );
         alert("Updated Successfully ✅");
       } else {
         await axios.post(
-          "http://localhost:5000/api/designations",
+          "http://https://employee-analysis-system-1.onrender.com//api/designations",
           { name, department },
           { headers: { Authorization: `Bearer ${token}` } },
         );
@@ -74,7 +74,7 @@ const AddDesignation = () => {
   const handleDelete = async (id) => {
     try {
       if (window.confirm("Are you sure?")) {
-        await axios.delete(`http://localhost:5000/api/designations/${id}`, {
+        await axios.delete(`http://https://employee-analysis-system-1.onrender.com//api/designations/${id}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
 

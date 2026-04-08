@@ -11,7 +11,7 @@ const [formData, setFormData] = useState({});
     const fetchProfile = async () => {
       try {
         const res = await axios.get(
-          "http://localhost:5000/api/employee-dashboard",
+          "http://https://employee-analysis-system-1.onrender.com//api/employee-dashboard",
           {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -62,7 +62,7 @@ const handleEditClick = () => {
 const handleSave = async () => {
   try {
     await axios.put(
-      `http://localhost:5000/api/employees/${employee._id}`,
+      `http://https://employee-analysis-system-1.onrender.com//api/employees/${employee._id}`,
       formData,
       {
         headers: {
@@ -93,10 +93,10 @@ const handleSave = async () => {
         ? employee.profilePhoto.startsWith("http")
           ? employee.profilePhoto
           : employee.profilePhoto.startsWith("/uploads/")
-          ? `http://localhost:5000${employee.profilePhoto}`
+          ? `http://https://employee-analysis-system-1.onrender.com/${employee.profilePhoto}`
           : employee.profilePhoto.startsWith("uploads/")
-          ? `http://localhost:5000/${employee.profilePhoto}`
-          : `http://localhost:5000/uploads/${employee.profilePhoto}`
+          ? `http://https://employee-analysis-system-1.onrender.com//${employee.profilePhoto}`
+          : `http://https://employee-analysis-system-1.onrender.com//uploads/${employee.profilePhoto}`
         : "https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
     }
     alt="Profile"

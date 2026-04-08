@@ -29,7 +29,7 @@ const EmployeeMarkAttendance = () => {
   const fetchTodayAttendance = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:5000/api/employee/attendance/today",
+        "http://https://employee-analysis-system-1.onrender.com//api/employee/attendance/today",
         config
       );
 
@@ -73,7 +73,7 @@ const EmployeeMarkAttendance = () => {
       payload = { ...payload, ...location };
 
       const res = await axios.post(
-        "http://localhost:5000/api/employee/attendance/check-in",
+        "http://https://employee-analysis-system-1.onrender.com//api/employee/attendance/check-in",
         payload,
         config
       );
@@ -98,7 +98,7 @@ const EmployeeMarkAttendance = () => {
       setLoading(true);
 
       const res = await axios.put(
-        "http://localhost:5000/api/employee/attendance/check-out",
+        "http://https://employee-analysis-system-1.onrender.com//api/employee/attendance/check-out",
         {},
         config
       );

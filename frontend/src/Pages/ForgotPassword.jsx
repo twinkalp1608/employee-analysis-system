@@ -32,7 +32,7 @@ const seconds = timeLeft % 60;
   const sendOTP = async () => {
     setLoading(true);
     try {
-      await axios.post("http://localhost:5000/api/send-otp", { email });
+      await axios.post("http://https://employee-analysis-system-1.onrender.com//api/send-otp", { email });
       alert("OTP sent successfully");
       setStep(2);
     } catch (err) {
@@ -44,7 +44,7 @@ const seconds = timeLeft % 60;
   const verifyOTP = async () => {
   setLoading(true);
   try {
-    await axios.post("http://localhost:5000/api/verify-otp", {
+    await axios.post("http://https://employee-analysis-system-1.onrender.com//api/verify-otp", {
       email,
       otp,
     });
@@ -69,7 +69,7 @@ useEffect(() => {
   const resetPassword = async () => {
     setLoading(true);
     try {
-      await axios.post("http://localhost:5000/api/reset-password", {
+      await axios.post("http://https://employee-analysis-system-1.onrender.com//api/reset-password", {
         email,
         otp,
         newPassword,

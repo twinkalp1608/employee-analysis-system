@@ -23,7 +23,7 @@ const HrHome = () => {
         const token = localStorage.getItem("token");
 
         const res = await axios.get(
-            "http://localhost:5000/api/tasks",
+            "http://https://employee-analysis-system-1.onrender.com//api/tasks",
             {
                 headers: {
                     Authorization: `Bearer ${token}`
@@ -54,7 +54,7 @@ const HrHome = () => {
         const fetchStats = async () => {
             try {
                 const token = localStorage.getItem("token");
-                const res = await axios.get("http://localhost:5000/api/admin/dashboard-stats", {
+                const res = await axios.get("http://https://employee-analysis-system-1.onrender.com//api/admin/dashboard-stats", {
                     headers: { Authorization: `Bearer ${token}` }
                 });
                 setStats(res.data);

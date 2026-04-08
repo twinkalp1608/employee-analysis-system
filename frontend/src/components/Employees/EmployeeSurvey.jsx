@@ -21,7 +21,7 @@ const EmployeeSurvey = () => {
       setLoading(true);
 
       const res = await axios.get(
-        "http://localhost:5000/api/employee/engagement/surveys",
+        "http://https://employee-analysis-system-1.onrender.com//api/employee/engagement/surveys",
         authHeader
       );
 
@@ -67,7 +67,7 @@ const EmployeeSurvey = () => {
 
     try {
       const res = await axios.post(
-        `http://localhost:5000/api/employee/engagement/respond/${selectedSurvey._id}`,
+        `http://https://employee-analysis-system-1.onrender.com//api/employee/engagement/respond/${selectedSurvey._id}`,
         { answers, overallComment },
         authHeader
       );

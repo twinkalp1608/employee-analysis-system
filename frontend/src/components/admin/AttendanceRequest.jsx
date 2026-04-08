@@ -18,7 +18,7 @@ const AttendanceRequests = () => {
   const fetchRequests = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:5000/api/attendance/requests",
+        "http://https://employee-analysis-system-1.onrender.com//api/attendance/requests",
         config
       );
       setRequests(res.data);
@@ -30,7 +30,7 @@ const AttendanceRequests = () => {
   const updateRequestStatus = async (id, status) => {
     try {
       await axios.put(
-        `http://localhost:5000/api/attendance/requests/${id}`,
+        `http://https://employee-analysis-system-1.onrender.com//api/attendance/requests/${id}`,
         { status },
         config
       );

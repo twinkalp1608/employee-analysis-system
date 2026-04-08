@@ -19,7 +19,7 @@ export default function Login() {
     try {
       // ✅ Single Login API Call
       const response = await axios.post(
-        "http://localhost:5000/api/login",
+        "http://https://employee-analysis-system-1.onrender.com//api/login",
         { email, password }
       );
 

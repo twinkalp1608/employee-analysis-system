@@ -18,7 +18,7 @@ const EmployeeApplyLeave = () => {
     const fetchEmployee = async () => {
       try {
         const res = await axios.get(
-          "http://localhost:5000/api/employee-dashboard",
+          "http://https://employee-analysis-system-1.onrender.com//api/employee-dashboard",
           {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("token")}`
@@ -40,7 +40,7 @@ const EmployeeApplyLeave = () => {
 
     try {
       await axios.post(
-        "http://localhost:5000/api/leave/apply",
+        "http://https://employee-analysis-system-1.onrender.com//api/leave/apply",
         form,
         {
           headers: {

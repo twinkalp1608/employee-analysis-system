@@ -41,7 +41,7 @@ const AddEmployee = () => {
   setFormData(prev => ({ ...prev, employeeId: randomId }));
 
   // 🔹 Fetch Departments
-  axios.get("http://localhost:5000/api/departments", {
+  axios.get("http://https://employee-analysis-system-1.onrender.com//api/departments", {
     headers: {
       Authorization: `Bearer ${token}`
     }
@@ -76,7 +76,7 @@ const AddEmployee = () => {
     }
 
     const res = await axios.post(
-      "http://localhost:5000/api/employees",
+      "http://https://employee-analysis-system-1.onrender.com//api/employees",
       data,
       {
         headers: {
@@ -130,7 +130,7 @@ const AddEmployee = () => {
 
     if (deptId) {
       const res = await axios.get(
-      `http://localhost:5000/api/designations?departmentId=${deptId}`,
+      `http://https://employee-analysis-system-1.onrender.com//api/designations?departmentId=${deptId}`,
         {
           headers: { Authorization: `Bearer ${token}` }
         }
