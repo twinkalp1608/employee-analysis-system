@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import "../../style/Performance.css";
+import "../../style/performance.css";
 
 const Performance = () => {
   const role = localStorage.getItem("role");
