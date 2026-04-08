@@ -13,7 +13,7 @@ const AdminLeave = () => {
   const fetchLeaves = async () => {
     try {
       const res = await axios.get(
-        "http://https://employee-analysis-system-1.onrender.com//api/admin/leaves",
+        "https://employee-analysis-system-1.onrender.com//api/admin/leaves",
         {
           headers: { Authorization: `Bearer ${token}` },
         }
@@ -27,7 +27,7 @@ const AdminLeave = () => {
   const updateStatus = async (id, status) => {
     try {
       await axios.put(
-        `http://https://employee-analysis-system-1.onrender.com//api/admin/leave-status/${id}`,
+        `https://employee-analysis-system-1.onrender.com//api/admin/leave-status/${id}`,
         { status },
         {
           headers: { Authorization: `Bearer ${token}` },

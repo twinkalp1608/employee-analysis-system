@@ -15,7 +15,7 @@ const [submissionRemarks, setSubmissionRemarks] = useState({});
   const fetchEmployee = async () => {
     try {
       const res = await axios.get(
-        "http://https://employee-analysis-system-1.onrender.com//api/employee-dashboard",
+        "https://employee-analysis-system-1.onrender.com//api/employee-dashboard",
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -32,7 +32,7 @@ const [submissionRemarks, setSubmissionRemarks] = useState({});
   // Fetch tasks
   const fetchTasks = async () => {
     try {
-      const res = await axios.get("http://https://employee-analysis-system-1.onrender.com//api/employee/tasks", {
+      const res = await axios.get("https://employee-analysis-system-1.onrender.com//api/employee/tasks", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -53,7 +53,7 @@ const [submissionRemarks, setSubmissionRemarks] = useState({});
   const updateStatus = async (id, status) => {
     try {
       await axios.put(
-        `http://https://employee-analysis-system-1.onrender.com//api/employee/tasks/${id}`,
+        `https://employee-analysis-system-1.onrender.com//api/employee/tasks/${id}`,
         {
           status,
           remarks: remarks[id] || "",
@@ -81,7 +81,7 @@ const [submissionRemarks, setSubmissionRemarks] = useState({});
     }
 
     await axios.put(
-      `http://https://employee-analysis-system-1.onrender.com//api/employee/tasks/${id}/submit`,
+      `https://employee-analysis-system-1.onrender.com//api/employee/tasks/${id}/submit`,
       formData,
       {
         headers: {
@@ -144,7 +144,7 @@ const [submissionRemarks, setSubmissionRemarks] = useState({});
               {task.attachment && (
   <div className="employee-task-attachment">
     <a
-      href={`http://https://employee-analysis-system-1.onrender.com//${task.attachment}`}
+      href={`https://employee-analysis-system-1.onrender.com//${task.attachment}`}
       target="_blank"
       rel="noreferrer"
     >
@@ -155,7 +155,7 @@ const [submissionRemarks, setSubmissionRemarks] = useState({});
 {task.employeeSubmission && (
   <div className="employee-task-attachment">
     <a
-      href={`http://https://employee-analysis-system-1.onrender.com//${task.employeeSubmission}`}
+      href={`https://employee-analysis-system-1.onrender.com//${task.employeeSubmission}`}
       target="_blank"
       rel="noreferrer"
     >

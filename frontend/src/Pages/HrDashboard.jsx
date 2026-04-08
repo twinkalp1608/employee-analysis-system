@@ -137,7 +137,7 @@ const HrDashboard = () => {
 
   const fetchNotifications = async () => {
     try {
-      const res = await axios.get("http://https://employee-analysis-system-1.onrender.com//api/notifications/hr", {
+      const res = await axios.get("https://employee-analysis-system-1.onrender.com//api/notifications/hr", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -160,7 +160,7 @@ const HrDashboard = () => {
     if (isOpening) {
       try {
         await axios.put(
-          "http://https://employee-analysis-system-1.onrender.com//api/notifications/read-all/hr",
+          "https://employee-analysis-system-1.onrender.com//api/notifications/read-all/hr",
           {},
           {
             headers: {

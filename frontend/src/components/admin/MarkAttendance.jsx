@@ -26,7 +26,7 @@ const MarkAttendance = () => {
 
  const fetchEmployees = async () => {
   try {
-    const res = await axios.get("http://https://employee-analysis-system-1.onrender.com//api/employees", config);
+    const res = await axios.get("https://employee-analysis-system-1.onrender.com//api/employees", config);
     setEmployees(res.data);
   } catch (error) {
     console.error("Error fetching employees:", error.response?.data || error.message);
@@ -50,7 +50,7 @@ const MarkAttendance = () => {
 
   try {
     await axios.post(
-      "http://https://employee-analysis-system-1.onrender.com//api/admin/attendance",
+      "https://employee-analysis-system-1.onrender.com//api/admin/attendance",
       formData,
       config
     );

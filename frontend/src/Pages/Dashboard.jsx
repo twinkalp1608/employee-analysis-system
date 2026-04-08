@@ -159,7 +159,7 @@ const Dashboard = () => {
   const fetchNotifications = async () => {
     try {
       const res = await axios.get(
-        `http://https://employee-analysis-system-1.onrender.com//api/notifications/${role}`,
+        `https://employee-analysis-system-1.onrender.com//api/notifications/${role}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -183,7 +183,7 @@ const Dashboard = () => {
     if (isOpening) {
       try {
         await axios.put(
-          `http://https://employee-analysis-system-1.onrender.com//api/notifications/read-all/${role}`,
+          `https://employee-analysis-system-1.onrender.com//api/notifications/read-all/${role}`,
           {},
           {
             headers: {

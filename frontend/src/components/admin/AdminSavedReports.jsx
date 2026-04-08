@@ -16,7 +16,7 @@ const AdminSavedReports = () => {
   const fetchSavedReports = async () => {
     try {
       setLoading(true);
-      const res = await axios.get("http://https://employee-analysis-system-1.onrender.com//api/reports/saved", {
+      const res = await axios.get("https://employee-analysis-system-1.onrender.com//api/reports/saved", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setReports(res.data || []);
@@ -31,7 +31,7 @@ const AdminSavedReports = () => {
   const openReport = async (id) => {
     try {
       setLoading(true);
-      const res = await axios.get(`http://https://employee-analysis-system-1.onrender.com//api/reports/saved/${id}`, {
+      const res = await axios.get(`https://employee-analysis-system-1.onrender.com//api/reports/saved/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setSelectedReport(res.data);
@@ -46,7 +46,7 @@ const AdminSavedReports = () => {
   const handleExportPDF = async (id, reportType) => {
     try {
       const res = await axios.get(
-        `http://https://employee-analysis-system-1.onrender.com//api/reports/export-pdf/${id}`,
+        `https://employee-analysis-system-1.onrender.com//api/reports/export-pdf/${id}`,
         {
           headers: { Authorization: `Bearer ${token}` },
           responseType: "blob",
@@ -70,7 +70,7 @@ const AdminSavedReports = () => {
   const handleExportExcel = async (id, reportType) => {
     try {
       const res = await axios.get(
-        `http://https://employee-analysis-system-1.onrender.com//api/reports/export-excel/${id}`,
+        `https://employee-analysis-system-1.onrender.com//api/reports/export-excel/${id}`,
         {
           headers: { Authorization: `Bearer ${token}` },
           responseType: "blob",
