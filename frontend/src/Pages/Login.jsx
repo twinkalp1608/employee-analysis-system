@@ -36,7 +36,7 @@ export default function Login() {
 localStorage.setItem(
   "user",
   JSON.stringify({
-    email: email,   // 🔥 directly input field mathi levanu
+    email: email,   
     role: response.data.role
   })
 );
