@@ -7392,7 +7392,7 @@ app.get("/api/employee/home", verifyToken, async (req, res) => {
       ============================== */
 
 app.get("/", (req, res) => {
-  res.send("HRMS Backend is running successfully 🚀");
+  res.send("EAS Backend is running successfully 🚀");
 });
 
 const PORT = process.env.PORT || 5000;
