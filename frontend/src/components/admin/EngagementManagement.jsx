@@ -38,7 +38,7 @@ const EngagementManagement = () => {
   const fetchDepartments = async () => {
     try {
       const res = await axios.get(
-        "${import.meta.env.VITE_API_URL}/api/departments",
+        "http://localhost:5000/api/departments",
         authHeader,
       );
       setDepartments(res.data || []);
@@ -50,7 +50,7 @@ const EngagementManagement = () => {
   const fetchSurveys = async () => {
     try {
       const res = await axios.get(
-        "${import.meta.env.VITE_API_URL}/api/engagement/surveys",
+        "http://localhost:5000/api/engagement/surveys",
         authHeader,
       );
       setSurveys(res.data || []);
@@ -62,7 +62,7 @@ const EngagementManagement = () => {
   const fetchSummary = async () => {
     try {
       const res = await axios.get(
-        "${import.meta.env.VITE_API_URL}/api/engagement/summary",
+        "http://localhost:5000/api/engagement/summary",
         authHeader,
       );
       setSummary(res.data);
@@ -74,7 +74,7 @@ const EngagementManagement = () => {
   const fetchResponses = async (surveyId) => {
   try {
     const res = await axios.get(
-      `${import.meta.env.VITE_API_URL}/api/engagement/responses/${surveyId}`,
+      `http://localhost:5000/api/engagement/responses/${surveyId}`,
       authHeader
     );
 
@@ -136,7 +136,7 @@ const EngagementManagement = () => {
       };
 
       const res = await axios.post(
-        "${import.meta.env.VITE_API_URL}/api/engagement/surveys",
+        "http://localhost:5000/api/engagement/surveys",
         payload,
         authHeader,
       );
@@ -169,7 +169,7 @@ const EngagementManagement = () => {
   const closeSurvey = async (id) => {
     try {
       const res = await axios.put(
-        `${import.meta.env.VITE_API_URL}/api/engagement/surveys/${id}/close`,
+        `http://localhost:5000/api/engagement/surveys/${id}/close`,
         {},
         authHeader,
       );
@@ -184,7 +184,7 @@ const EngagementManagement = () => {
   const deleteSurvey = async (id) => {
     try {
       const res = await axios.delete(
-        `${import.meta.env.VITE_API_URL}/api/engagement/surveys/${id}`,
+        `http://localhost:5000/api/engagement/surveys/${id}`,
         authHeader,
       );
       setMessage(res.data.message);

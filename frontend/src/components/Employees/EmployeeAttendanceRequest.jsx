@@ -27,7 +27,7 @@ const EmployeeAttendanceRequest = () => {
   const fetchBlockedDates = async () => {
     try {
       const res = await axios.get(
-        "${import.meta.env.VITE_API_URL}/api/holidays/blocked-dates",
+        "http://localhost:5000/api/holidays/blocked-dates",
         config
       );
       setBlockedDates(res.data || []);
@@ -100,7 +100,7 @@ const EmployeeAttendanceRequest = () => {
       setLoading(true);
 
       await axios.post(
-        "${import.meta.env.VITE_API_URL}/api/attendance/request",
+        "http://localhost:5000/api/attendance/request",
         formData,
         config
       );

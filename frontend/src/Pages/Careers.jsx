@@ -19,7 +19,7 @@ export default function Careers() {
       setLoading(true);
       setError("");
 
-      const res = await axios.get("${import.meta.env.VITE_API_URL}/api/jobs");
+      const res = await axios.get("http://localhost:5000/api/jobs");
 
       // Safe check
       if (res.data && Array.isArray(res.data.jobs)) {

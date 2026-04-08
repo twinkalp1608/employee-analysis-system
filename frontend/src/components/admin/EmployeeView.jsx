@@ -13,7 +13,7 @@ const EmployeeView = () => {
     const token = localStorage.getItem("token");
 
     const response = await axios.get(
-      `${import.meta.env.VITE_API_URL}/${employee.resume}`,
+      `http://localhost:5000/${employee.resume}`,
       {
         responseType: "blob",
         headers: {
@@ -46,7 +46,7 @@ useEffect(() => {
   const token = localStorage.getItem("token");
 
   axios.get(
-    `${import.meta.env.VITE_API_URL}/api/employees/${id}`,
+    `http://localhost:5000/api/employees/${id}`,
     {
       headers: {
         Authorization: `Bearer ${token}`
@@ -120,7 +120,7 @@ useEffect(() => {
           }}
         >
           <img
-            src={`${import.meta.env.VITE_API_URL}/${employee.profilePhoto}`}
+            src={`http://localhost:5000/${employee.profilePhoto}`}
             alt="Profile"
             width="140"
             height="140"

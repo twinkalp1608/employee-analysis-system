@@ -68,7 +68,7 @@ const [status] = useState("Pending Approval");
         otherDeduction: formData.otherDeduction || 0,
       };
 
-await axios.post("${import.meta.env.VITE_API_URL}/api/hr/payroll", payrollData, {
+await axios.post("http://localhost:5000/api/hr/payroll", payrollData, {
   headers: {
     Authorization: `Bearer ${token}`,
   },
@@ -109,7 +109,7 @@ setShowPayslip(false);
     try {
       const token = localStorage.getItem("token");
 
-      const res = await axios.get("${import.meta.env.VITE_API_URL}/api/employees", {
+      const res = await axios.get("http://localhost:5000/api/employees", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -131,7 +131,7 @@ setShowPayslip(false);
 
       const token = localStorage.getItem("token");
 
-      const res = await axios.get("${import.meta.env.VITE_API_URL}/api/hr/payroll/check", {
+      const res = await axios.get("http://localhost:5000/api/hr/payroll/check", {
         params: { employeeId, month, year },
         headers: {
           Authorization: `Bearer ${token}`,
@@ -169,7 +169,7 @@ setShowPayslip(false);
       const token = localStorage.getItem("token");
 
       const res = await axios.post(
-        "${import.meta.env.VITE_API_URL}/api/hr/payroll/preview",
+        "http://localhost:5000/api/hr/payroll/preview",
         {
           employeeId: formData.employeeId,
           month: formData.month,

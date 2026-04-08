@@ -14,7 +14,7 @@ const AddDesignation = () => {
   const token = localStorage.getItem("token");
 
   const fetchDepartments = async () => {
-    const res = await axios.get("${import.meta.env.VITE_API_URL}/api/departments", {
+    const res = await axios.get("http://localhost:5000/api/departments", {
       headers: { Authorization: `Bearer ${token}` },
     });
     setDepartments(res.data);
@@ -22,7 +22,7 @@ const AddDesignation = () => {
 
   const fetchDesignations = async (deptId = "") => {
     const res = await axios.get(
-      `${import.meta.env.VITE_API_URL}/api/designations?departmentId=${deptId}`,
+      `http://localhost:5000/api/designations?departmentId=${deptId}`,
       {
         headers: { Authorization: `Bearer ${token}` },
       },
@@ -47,14 +47,14 @@ const AddDesignation = () => {
     try {
       if (editingId) {
         await axios.put(
-          `${import.meta.env.VITE_API_URL}/api/designations/${editingId}`,
+          `http://localhost:5000/api/designations/${editingId}`,
           { name, department },
           { headers: { Authorization: `Bearer ${token}` } },
         );
         alert("Updated Successfully ✅");
       } else {
         await axios.post(
-          "${import.meta.env.VITE_API_URL}/api/designations",
+          "http://localhost:5000/api/designations",
           { name, department },
           { headers: { Authorization: `Bearer ${token}` } },
         );
@@ -74,7 +74,7 @@ const AddDesignation = () => {
   const handleDelete = async (id) => {
     try {
       if (window.confirm("Are you sure?")) {
-        await axios.delete(`${import.meta.env.VITE_API_URL}/api/designations/${id}`, {
+        await axios.delete(`http://localhost:5000/api/designations/${id}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
 

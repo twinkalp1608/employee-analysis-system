@@ -170,11 +170,12 @@ const razorpay = new Razorpay({
         🔹 MongoDB Connection
       ============================== */
 
-mongoose
-  .connect("mongodb://127.0.0.1:27017/hr")
-  .then(() => console.log("MongoDB Connected ✅"))
-  .catch((err) => console.log(err));
 
+
+mongoose
+  .connect(process.env.MONGO_URI)
+  .then(() => console.log("MongoDB Connected ✅"))
+  .catch((err) => console.log("MongoDB Error:", err.message));
 /* ==============================
         🔹 Schema
       ============================== */
@@ -7389,6 +7390,10 @@ app.get("/api/employee/home", verifyToken, async (req, res) => {
 /* ==============================
         🔹 Start Server
       ============================== */
+
+app.get("/", (req, res) => {
+  res.send("HRMS Backend is running successfully 🚀");
+});
 
 const PORT = process.env.PORT || 5000;
 

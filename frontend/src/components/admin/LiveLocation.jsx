@@ -44,7 +44,7 @@ const LiveLocation = () => {
   const fetchLocations = async () => {
     try {
       const res = await axios.get(
-        "${import.meta.env.VITE_API_URL}/api/admin/live-locations",
+        "http://localhost:5000/api/admin/live-locations",
         {
           headers: {
             Authorization: `Bearer ${token}`,

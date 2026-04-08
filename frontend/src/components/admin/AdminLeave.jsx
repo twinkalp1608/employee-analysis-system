@@ -13,7 +13,7 @@ const AdminLeave = () => {
   const fetchLeaves = async () => {
     try {
       const res = await axios.get(
-        "${import.meta.env.VITE_API_URL}/api/admin/leaves",
+        "http://localhost:5000/api/admin/leaves",
         {
           headers: { Authorization: `Bearer ${token}` },
         }
@@ -27,7 +27,7 @@ const AdminLeave = () => {
   const updateStatus = async (id, status) => {
     try {
       await axios.put(
-        `${import.meta.env.VITE_API_URL}/api/admin/leave-status/${id}`,
+        `http://localhost:5000/api/admin/leave-status/${id}`,
         { status },
         {
           headers: { Authorization: `Bearer ${token}` },

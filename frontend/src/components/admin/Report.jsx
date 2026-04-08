@@ -45,7 +45,7 @@ const Report = () => {
 
   const fetchDepartments = async () => {
     try {
-      const res = await axios.get("${import.meta.env.VITE_API_URL}/api/departments", {
+      const res = await axios.get("http://localhost:5000/api/departments", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setDepartments(res.data || []);
@@ -56,7 +56,7 @@ const Report = () => {
 
   const fetchEmployees = async () => {
     try {
-      const res = await axios.get("${import.meta.env.VITE_API_URL}/api/employees", {
+      const res = await axios.get("http://localhost:5000/api/employees", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setEmployees(res.data || []);
@@ -91,7 +91,7 @@ const Report = () => {
       }
 
       const res = await axios.get(
-        `${import.meta.env.VITE_API_URL}/api/employees/by-department/${selectedDepartment}`,
+        `http://localhost:5000/api/employees/by-department/${selectedDepartment}`,
         {
           headers: { Authorization: `Bearer ${token}` },
         }
@@ -120,8 +120,8 @@ const Report = () => {
 
       const endpoint =
         role === "hr"
-          ? "${import.meta.env.VITE_API_URL}/api/reports/generate-and-save"
-          : "${import.meta.env.VITE_API_URL}/api/reports/generate";
+          ? "http://localhost:5000/api/reports/generate-and-save"
+          : "http://localhost:5000/api/reports/generate";
 
       const res = await axios.post(
         endpoint,

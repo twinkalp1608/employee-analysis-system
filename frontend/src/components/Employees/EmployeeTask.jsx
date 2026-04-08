@@ -15,7 +15,7 @@ const [submissionRemarks, setSubmissionRemarks] = useState({});
   const fetchEmployee = async () => {
     try {
       const res = await axios.get(
-        "${import.meta.env.VITE_API_URL}/api/employee-dashboard",
+        "http://localhost:5000/api/employee-dashboard",
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -32,7 +32,7 @@ const [submissionRemarks, setSubmissionRemarks] = useState({});
   // Fetch tasks
   const fetchTasks = async () => {
     try {
-      const res = await axios.get("${import.meta.env.VITE_API_URL}/api/employee/tasks", {
+      const res = await axios.get("http://localhost:5000/api/employee/tasks", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -53,7 +53,7 @@ const [submissionRemarks, setSubmissionRemarks] = useState({});
   const updateStatus = async (id, status) => {
     try {
       await axios.put(
-        `${import.meta.env.VITE_API_URL}/api/employee/tasks/${id}`,
+        `http://localhost:5000/api/employee/tasks/${id}`,
         {
           status,
           remarks: remarks[id] || "",
@@ -81,7 +81,7 @@ const [submissionRemarks, setSubmissionRemarks] = useState({});
     }
 
     await axios.put(
-      `${import.meta.env.VITE_API_URL}/api/employee/tasks/${id}/submit`,
+      `http://localhost:5000/api/employee/tasks/${id}/submit`,
       formData,
       {
         headers: {
@@ -144,7 +144,7 @@ const [submissionRemarks, setSubmissionRemarks] = useState({});
               {task.attachment && (
   <div className="employee-task-attachment">
     <a
-      href={`${import.meta.env.VITE_API_URL}/${task.attachment}`}
+      href={`http://localhost:5000/${task.attachment}`}
       target="_blank"
       rel="noreferrer"
     >
@@ -155,7 +155,7 @@ const [submissionRemarks, setSubmissionRemarks] = useState({});
 {task.employeeSubmission && (
   <div className="employee-task-attachment">
     <a
-      href={`${import.meta.env.VITE_API_URL}/${task.employeeSubmission}`}
+      href={`http://localhost:5000/${task.employeeSubmission}`}
       target="_blank"
       rel="noreferrer"
     >

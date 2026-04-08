@@ -18,7 +18,7 @@ const AttendanceRequests = () => {
   const fetchRequests = async () => {
     try {
       const res = await axios.get(
-        "${import.meta.env.VITE_API_URL}/api/attendance/requests",
+        "http://localhost:5000/api/attendance/requests",
         config
       );
       setRequests(res.data);
@@ -30,7 +30,7 @@ const AttendanceRequests = () => {
   const updateRequestStatus = async (id, status) => {
     try {
       await axios.put(
-        `${import.meta.env.VITE_API_URL}/api/attendance/requests/${id}`,
+        `http://localhost:5000/api/attendance/requests/${id}`,
         { status },
         config
       );

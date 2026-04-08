@@ -19,7 +19,7 @@ export default function Login() {
     try {
       // ✅ Single Login API Call
       const response = await axios.post(
-        "${import.meta.env.VITE_API_URL}/api/login",
+        "http://localhost:5000/api/login",
         { email, password }
       );
 

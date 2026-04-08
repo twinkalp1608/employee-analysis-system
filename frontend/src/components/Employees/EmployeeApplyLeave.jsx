@@ -18,7 +18,7 @@ const EmployeeApplyLeave = () => {
     const fetchEmployee = async () => {
       try {
         const res = await axios.get(
-          "${import.meta.env.VITE_API_URL}/api/employee-dashboard",
+          "http://localhost:5000/api/employee-dashboard",
           {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("token")}`
@@ -40,7 +40,7 @@ const EmployeeApplyLeave = () => {
 
     try {
       await axios.post(
-        "${import.meta.env.VITE_API_URL}/api/leave/apply",
+        "http://localhost:5000/api/leave/apply",
         form,
         {
           headers: {

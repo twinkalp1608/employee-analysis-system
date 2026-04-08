@@ -28,7 +28,7 @@ export default function ApplyJob() {
   // Fetch job details
   const fetchJobDetails = async () => {
     try {
-      const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/jobs/${jobId}`);
+      const res = await axios.get(`http://localhost:5000/api/jobs/${jobId}`);
       setJob(res.data.job);
     } catch (error) {
       console.log(error);
@@ -61,7 +61,7 @@ export default function ApplyJob() {
       }
 
       const res = await axios.post(
-        "${import.meta.env.VITE_API_URL}/api/candidates/apply",
+        "http://localhost:5000/api/candidates/apply",
         form
       );
 

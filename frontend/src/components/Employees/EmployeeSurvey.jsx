@@ -21,7 +21,7 @@ const EmployeeSurvey = () => {
       setLoading(true);
 
       const res = await axios.get(
-        "${import.meta.env.VITE_API_URL}/api/employee/engagement/surveys",
+        "http://localhost:5000/api/employee/engagement/surveys",
         authHeader
       );
 
@@ -67,7 +67,7 @@ const EmployeeSurvey = () => {
 
     try {
       const res = await axios.post(
-        `${import.meta.env.VITE_API_URL}/api/employee/engagement/respond/${selectedSurvey._id}`,
+        `http://localhost:5000/api/employee/engagement/respond/${selectedSurvey._id}`,
         { answers, overallComment },
         authHeader
       );

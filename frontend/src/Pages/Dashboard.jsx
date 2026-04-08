@@ -159,7 +159,7 @@ const Dashboard = () => {
   const fetchNotifications = async () => {
     try {
       const res = await axios.get(
-        `${import.meta.env.VITE_API_URL}/api/notifications/${role}`,
+        `http://localhost:5000/api/notifications/${role}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -183,7 +183,7 @@ const Dashboard = () => {
     if (isOpening) {
       try {
         await axios.put(
-          `${import.meta.env.VITE_API_URL}/api/notifications/read-all/${role}`,
+          `http://localhost:5000/api/notifications/read-all/${role}`,
           {},
           {
             headers: {

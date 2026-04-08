@@ -12,7 +12,7 @@ const AdminJobApproval = () => {
   const fetchPendingJobs = async () => {
     try {
       const token = localStorage.getItem("token");
-      const res = await axios.get("${import.meta.env.VITE_API_URL}/api/admin/jobs/pending", {
+      const res = await axios.get("http://localhost:5000/api/admin/jobs/pending", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setJobs(res.data.jobs || []);
@@ -25,7 +25,7 @@ const AdminJobApproval = () => {
     try {
       const token = localStorage.getItem("token");
       await axios.put(
-        `${import.meta.env.VITE_API_URL}/api/admin/jobs/${id}/status`,
+        `http://localhost:5000/api/admin/jobs/${id}/status`,
         { status },
         { headers: { Authorization: `Bearer ${token}` } }
       );

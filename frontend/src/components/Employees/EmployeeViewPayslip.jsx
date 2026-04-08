@@ -39,7 +39,7 @@ const EmployeeViewPayslip = () => {
       setMessage("");
 
       const res = await axios.get(
-        `${import.meta.env.VITE_API_URL}/api/employee/payroll/view?month=${month}&year=${year}`,
+        `http://localhost:5000/api/employee/payroll/view?month=${month}&year=${year}`,
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,

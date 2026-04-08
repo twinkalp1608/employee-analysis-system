@@ -24,7 +24,7 @@ const AdminRecruitmentDashboard = () => {
     try {
       const token = localStorage.getItem("token");
       const res = await axios.get(
-        "${import.meta.env.VITE_API_URL}/api/admin/recruitment/dashboard",
+        "http://localhost:5000/api/admin/recruitment/dashboard",
         {
           headers: { Authorization: `Bearer ${token}` },
         }

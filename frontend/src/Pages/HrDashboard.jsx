@@ -137,7 +137,7 @@ const HrDashboard = () => {
 
   const fetchNotifications = async () => {
     try {
-      const res = await axios.get("${import.meta.env.VITE_API_URL}/api/notifications/hr", {
+      const res = await axios.get("http://localhost:5000/api/notifications/hr", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -160,7 +160,7 @@ const HrDashboard = () => {
     if (isOpening) {
       try {
         await axios.put(
-          "${import.meta.env.VITE_API_URL}/api/notifications/read-all/hr",
+          "http://localhost:5000/api/notifications/read-all/hr",
           {},
           {
             headers: {

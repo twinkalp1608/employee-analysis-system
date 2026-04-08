@@ -13,7 +13,7 @@ const ManageJobs = () => {
   const fetchJobs = async () => {
     try {
       const token = localStorage.getItem("token");
-      const res = await axios.get("${import.meta.env.VITE_API_URL}/api/hr/jobs", {
+      const res = await axios.get("http://localhost:5000/api/hr/jobs", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setJobs(res.data.jobs || []);
@@ -26,7 +26,7 @@ const ManageJobs = () => {
   const handleDelete = async (id) => {
     try {
       const token = localStorage.getItem("token");
-      await axios.delete(`${import.meta.env.VITE_API_URL}/api/hr/jobs/${id}`, {
+      await axios.delete(`http://localhost:5000/api/hr/jobs/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       fetchJobs();

@@ -23,7 +23,7 @@ const AttendanceReport = () => {
 
     try {
       const res = await axios.get(
-        "${import.meta.env.VITE_API_URL}/api/admin/attendance",
+        "http://localhost:5000/api/admin/attendance",
         config
       );
 
@@ -78,7 +78,7 @@ const AttendanceReport = () => {
 
   try {
     const res = await axios.get(
-      "${import.meta.env.VITE_API_URL}/api/admin/attendance",
+      "http://localhost:5000/api/admin/attendance",
       config
     );
 

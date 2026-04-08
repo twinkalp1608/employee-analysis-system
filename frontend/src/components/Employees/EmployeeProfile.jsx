@@ -11,7 +11,7 @@ const [formData, setFormData] = useState({});
     const fetchProfile = async () => {
       try {
         const res = await axios.get(
-          "${import.meta.env.VITE_API_URL}/api/employee-dashboard",
+          "http://localhost:5000/api/employee-dashboard",
           {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -62,7 +62,7 @@ const handleEditClick = () => {
 const handleSave = async () => {
   try {
     await axios.put(
-      `${import.meta.env.VITE_API_URL}/api/employees/${employee._id}`,
+      `http://localhost:5000/api/employees/${employee._id}`,
       formData,
       {
         headers: {
@@ -93,10 +93,10 @@ const handleSave = async () => {
         ? employee.profilePhoto.startsWith("http")
           ? employee.profilePhoto
           : employee.profilePhoto.startsWith("/uploads/")
-          ? `${import.meta.env.VITE_API_URL}${employee.profilePhoto}`
+          ? `http://localhost:5000${employee.profilePhoto}`
           : employee.profilePhoto.startsWith("uploads/")
-          ? `${import.meta.env.VITE_API_URL}/${employee.profilePhoto}`
-          : `${import.meta.env.VITE_API_URL}/uploads/${employee.profilePhoto}`
+          ? `http://localhost:5000/${employee.profilePhoto}`
+          : `http://localhost:5000/uploads/${employee.profilePhoto}`
         : "https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
     }
     alt="Profile"

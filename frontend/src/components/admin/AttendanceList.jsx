@@ -27,7 +27,7 @@ const [editForm, setEditForm] = useState({
 const fetchAttendance = async () => {
   try {
     const res = await axios.get(
-      "${import.meta.env.VITE_API_URL}/api/admin/attendance",
+      "http://localhost:5000/api/admin/attendance",
       config
     );
     setAttendance(res.data);
@@ -59,7 +59,7 @@ const handleEditChange = (e) => {
 const handleUpdateAttendance = async () => {
   try {
     await axios.put(
-      `${import.meta.env.VITE_API_URL}/api/admin/attendance/${selectedAttendance._id}`,
+      `http://localhost:5000/api/admin/attendance/${selectedAttendance._id}`,
       editForm,
       config
     );
@@ -94,7 +94,7 @@ const filteredAttendance = attendance.filter((item) => {
 });
   const deleteAttendance = async (id) => {
   try {
-    await axios.delete(`${import.meta.env.VITE_API_URL}/api/admin/attendance/${id}`, config);
+    await axios.delete(`http://localhost:5000/api/admin/attendance/${id}`, config);
     fetchAttendance();
   } catch (err) {
     console.error("Delete error:", err.response?.data || err.message);

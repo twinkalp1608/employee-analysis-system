@@ -24,7 +24,7 @@ const Task = () => {
 
   const fetchEmployees = async () => {
     try {
-      const res = await axios.get("${import.meta.env.VITE_API_URL}/api/employees", {
+      const res = await axios.get("http://localhost:5000/api/employees", {
         headers: { Authorization: `Bearer ${token}` },
       });
 
@@ -36,7 +36,7 @@ const Task = () => {
 
   const fetchTasks = async () => {
     try {
-      const res = await axios.get("${import.meta.env.VITE_API_URL}/api/tasks", {
+      const res = await axios.get("http://localhost:5000/api/tasks", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setTasks(res.data);
@@ -111,7 +111,7 @@ const handleEmployeeSelect = (employeeId, checked) => {
   }
 
   await axios.put(
-    `${import.meta.env.VITE_API_URL}/api/tasks/${editTaskId}`,
+    `http://localhost:5000/api/tasks/${editTaskId}`,
     editFormData,
     {
       headers: {
@@ -137,7 +137,7 @@ const handleEmployeeSelect = (employeeId, checked) => {
     formData.append("attachment", form.attachment);
   }
 
-  await axios.post("${import.meta.env.VITE_API_URL}/api/tasks", formData, {
+  await axios.post("http://localhost:5000/api/tasks", formData, {
     headers: {
       Authorization: `Bearer ${token}`,
       "Content-Type": "multipart/form-data",
@@ -207,7 +207,7 @@ const handleEmployeeSelect = (employeeId, checked) => {
 
     if (!confirmDelete) return;
 
-    await axios.delete(`${import.meta.env.VITE_API_URL}/api/tasks/${id}`, {
+    await axios.delete(`http://localhost:5000/api/tasks/${id}`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -225,7 +225,7 @@ const handleEmployeeSelect = (employeeId, checked) => {
   const handleReview = async (id, status) => {
   try {
     await axios.put(
-      `${import.meta.env.VITE_API_URL}/api/tasks/review/${id}`,
+      `http://localhost:5000/api/tasks/review/${id}`,
       { status },
       {
         headers: {
@@ -466,7 +466,7 @@ const handleEmployeeSelect = (employeeId, checked) => {
           {task.attachment && (
             <div className="task-attachment">
               <a
-                href={`${import.meta.env.VITE_API_URL}/${task.attachment}`}
+                href={`http://localhost:5000/${task.attachment}`}
                 target="_blank"
                 rel="noreferrer"
               >
@@ -478,7 +478,7 @@ const handleEmployeeSelect = (employeeId, checked) => {
           {task.employeeSubmission && (
             <div className="task-attachment">
               <a
-                href={`${import.meta.env.VITE_API_URL}/${task.employeeSubmission}`}
+                href={`http://localhost:5000/${task.employeeSubmission}`}
                 target="_blank"
                 rel="noreferrer"
               >

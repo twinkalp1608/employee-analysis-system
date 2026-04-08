@@ -18,7 +18,7 @@ const employeesPerPage = 5;
     const fetchEmployees = async () => {
       try {
         const response = await axios.get(
-          "${import.meta.env.VITE_API_URL}/api/employees",
+          "http://localhost:5000/api/employees",
           {
             headers: { Authorization: `Bearer ${token}` }
           }
@@ -43,7 +43,7 @@ const employeesPerPage = 5;
 
     try {
       await axios.delete(
-        `${import.meta.env.VITE_API_URL}/api/employees/${id}`,
+        `http://localhost:5000/api/employees/${id}`,
         {
           headers: { Authorization: `Bearer ${token}` }
         }

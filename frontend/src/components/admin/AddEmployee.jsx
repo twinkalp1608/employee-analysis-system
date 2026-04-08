@@ -41,7 +41,7 @@ const AddEmployee = () => {
   setFormData(prev => ({ ...prev, employeeId: randomId }));
 
   // 🔹 Fetch Departments
-  axios.get("${import.meta.env.VITE_API_URL}/api/departments", {
+  axios.get("http://localhost:5000/api/departments", {
     headers: {
       Authorization: `Bearer ${token}`
     }
@@ -76,7 +76,7 @@ const AddEmployee = () => {
     }
 
     const res = await axios.post(
-      "${import.meta.env.VITE_API_URL}/api/employees",
+      "http://localhost:5000/api/employees",
       data,
       {
         headers: {
@@ -130,7 +130,7 @@ const AddEmployee = () => {
 
     if (deptId) {
       const res = await axios.get(
-      `${import.meta.env.VITE_API_URL}/api/designations?departmentId=${deptId}`,
+      `http://localhost:5000/api/designations?departmentId=${deptId}`,
         {
           headers: { Authorization: `Bearer ${token}` }
         }

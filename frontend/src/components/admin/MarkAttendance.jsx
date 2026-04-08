@@ -26,7 +26,7 @@ const MarkAttendance = () => {
 
  const fetchEmployees = async () => {
   try {
-    const res = await axios.get("${import.meta.env.VITE_API_URL}/api/employees", config);
+    const res = await axios.get("http://localhost:5000/api/employees", config);
     setEmployees(res.data);
   } catch (error) {
     console.error("Error fetching employees:", error.response?.data || error.message);
@@ -50,7 +50,7 @@ const MarkAttendance = () => {
 
   try {
     await axios.post(
-      "${import.meta.env.VITE_API_URL}/api/admin/attendance",
+      "http://localhost:5000/api/admin/attendance",
       formData,
       config
     );

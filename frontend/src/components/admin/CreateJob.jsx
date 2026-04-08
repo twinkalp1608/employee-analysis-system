@@ -26,7 +26,7 @@ const CreateJob = () => {
     try {
       const token = localStorage.getItem("token");
 
-      const res = await axios.get("${import.meta.env.VITE_API_URL}/api/departments", {
+      const res = await axios.get("http://localhost:5000/api/departments", {
         headers: { Authorization: `Bearer ${token}` },
       });
 
@@ -41,7 +41,7 @@ const CreateJob = () => {
       const token = localStorage.getItem("token");
 
       const res = await axios.get(
-        `${import.meta.env.VITE_API_URL}/api/job-titles/by-department/${departmentId}`,
+        `http://localhost:5000/api/job-titles/by-department/${departmentId}`,
         {
           headers: { Authorization: `Bearer ${token}` },
         }
@@ -94,7 +94,7 @@ const CreateJob = () => {
         openings: Number(formData.openings),
       };
 
-      const res = await axios.post("${import.meta.env.VITE_API_URL}/api/hr/jobs", payload, {
+      const res = await axios.post("http://localhost:5000/api/hr/jobs", payload, {
         headers: { Authorization: `Bearer ${token}` },
       });
 

@@ -34,7 +34,7 @@ const EmployeeHome = ({ getNotificationIcon, formatNotificationTime }) => {
 
       const token = localStorage.getItem("token");
 
-      const res = await axios.get("${import.meta.env.VITE_API_URL}/api/employee/home", {
+      const res = await axios.get("http://localhost:5000/api/employee/home", {
         headers: { Authorization: `Bearer ${token}` },
       });
 

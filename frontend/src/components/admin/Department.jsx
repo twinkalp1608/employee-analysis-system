@@ -12,7 +12,7 @@ const Department = () => {
   // 🔹 Fetch Departments
   const fetchDepartments = async () => {
     try {
-      const res = await axios.get("${import.meta.env.VITE_API_URL}/api/departments", {
+      const res = await axios.get("http://localhost:5000/api/departments", {
         headers: { Authorization: `Bearer ${token}` }
       });
       setDepartments(res.data);
@@ -38,7 +38,7 @@ const Department = () => {
       if (editId) {
         // Update
         await axios.put(
-          `${import.meta.env.VITE_API_URL}/api/departments/${editId}`,
+          `http://localhost:5000/api/departments/${editId}`,
           { name },
           { headers: { Authorization: `Bearer ${token}` } }
         );
@@ -47,7 +47,7 @@ const Department = () => {
       } else {
         // Add
         await axios.post(
-          "${import.meta.env.VITE_API_URL}/api/departments",
+          "http://localhost:5000/api/departments",
           { name },
           { headers: { Authorization: `Bearer ${token}` } }
         );
@@ -67,7 +67,7 @@ const Department = () => {
 
     try {
       await axios.delete(
-        `${import.meta.env.VITE_API_URL}/api/departments/${id}`,
+        `http://localhost:5000/api/departments/${id}`,
         { headers: { Authorization: `Bearer ${token}` } }
       );
       alert("Department Deleted ❌");
